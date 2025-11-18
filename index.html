@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Volt — Frontend Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of a frontend developer specializing in clean, responsive UIs and API-driven web apps."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/bolt.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="#top" aria-label="Home">
+          <img src="assets/bolt.svg" alt="" width="24" height="24" />
+          VOLT
+        </a>
+        <nav class="nav-links" aria-label="primary">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <button
+            id="themeToggle"
+            class="btn btn-ghost"
+            aria-label="Toggle theme"
+          >
+            🌗
+          </button>
+          <!-- ⬇️ Replace with your real resume link -->
+          <a class="btn btn-primary" href="#" id="resumeLink"
+            >Download Résumé</a
+          >
+          <button class="hamburger" id="menuBtn" aria-label="Open menu">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 6h18M3 12h18M3 18h18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <!-- ⬇️ Replace with resume link -->
+        <a
+          href="#"
+          class="btn btn-primary"
+          style="margin: 1rem; text-align: center"
+          >Download Résumé</a
+        >
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero container">
+        <p class="kicker reveal">Frontend Developer</p>
+        <h1 class="headline reveal">
+          I build fast, clean,
+          <span class="text-gradient">production-ready</span> web UIs.
+        </h1>
+        <p class="subhead reveal">
+          I specialize in responsive interfaces, API integrations, and
+          delightful micro-interactions. This portfolio shows the work I can
+          ship on day one.
+        </p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section container">
+        <p class="kicker reveal">Projects</p>
+        <h2 class="reveal">Selected work</h2>
+        <p class="muted reveal">
+          Clean code, responsive layouts, and smooth UX — all built from
+          scratch.
+        </p>
+
+        <!-- FILTER CONTROLS -->
+        <div class="projects-controls reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="vanilla">Vanilla JS</button>
+          <button class="filter-btn" data-filter="api">API</button>
+          <button class="filter-btn" data-filter="react">React</button>
+        </div>
+
+        <!-- This grid is populated by script.js -->
+        <div
+          id="projectsGrid"
+          class="grid grid-2"
+          style="margin-top: 1rem"
+        ></div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section container">
+        <p class="kicker reveal">Skills</p>
+        <h2 class="reveal">Tools I use to ship</h2>
+        <div class="grid grid-3" style="margin-top: 1rem">
+          <div class="skill card reveal">
+            <h3>Core Web</h3>
+            <p class="muted">
+              Semantic HTML, modern CSS (flex/grid), vanilla JS, accessibility,
+              responsive design.
+            </p>
+          </div>
+          <div class="skill card reveal">
+            <h3>Frontend Patterns</h3>
+            <p class="muted">
+              State handling, async fetch, theming with CSS variables,
+              localStorage, component thinking.
+            </p>
+          </div>
+          <div class="skill card reveal">
+            <h3>Workflow</h3>
+            <p class="muted">
+              Git/GitHub, VS Code, Live Server, Netlify/Vercel, performance/UX
+              polish.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section container">
+        <p class="kicker reveal">About</p>
+        <h2 class="reveal">Who I am</h2>
+        <div class="about-grid">
+          <p class="reveal muted">
+            I’m a frontend developer focused on clean UI, reliability, and fast
+            iteration. I like turning product ideas into launchable,
+            maintainable interfaces with sensible patterns and just enough
+            polish to feel premium.
+          </p>
+          <p class="reveal muted">
+            Recently I’ve been building Volt — a cohesive set of projects
+            showcasing responsive design, API integration, and portfolio
+            presentation. I learn quickly and ship pragmatically.
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section container">
+        <p class="kicker reveal">Contact</p>
+        <h2 class="reveal">Let’s work together</h2>
+        <p class="muted reveal">
+          I’m open to junior frontend roles, contract work, and internships.
+        </p>
+
+        <div class="contact-grid" style="margin-top: 1rem">
+          <a class="card reveal" href="mailto:you@example.com">
+            <h3>Email</h3>
+            <p class="muted">contact.maryanzinko@gmail.com</p>
+          </a>
+
+          <!-- Netlify form -->
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            class="card reveal"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <label> Name <input type="text" name="name" required /></label>
+            <label> Email <input type="email" name="email" required /></label>
+            <label>
+              Message <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="container">
+        <div class="cta reveal">
+          <h2>Want a developer who ships?</h2>
+          <p class="muted">
+            I build polished, reliable UIs with a fast feedback loop.
+          </p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="#projects">See projects</a>
+            <a class="btn btn-ghost" href="#contact">Say hello</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container row">
+        <div class="brand small">
+          <img src="assets/bolt.svg" alt="" width="20" height="20" />
+          VOLT
+        </div>
+        <span class="muted"
+          >© <span id="year"></span> — All rights reserved.</span
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
