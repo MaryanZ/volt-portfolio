@@ -81,8 +81,8 @@ const projects = [
     blurb:
       "Modern landing with dark/light theme, animated reveals, mobile nav, and polished pricing UI.",
     tags: ["HTML", "CSS", "JavaScript", "Accessibility"],
-    demo: "#", // TODO: replace
-    source: "#", // TODO: replace
+    demo: "https://volt-landing.netlify.app", 
+    source: "https://github.com/MaryanZ/volt-landing", 
     icon: "assets/bolt.svg",
     category: "vanilla",
   },
@@ -91,8 +91,8 @@ const projects = [
     blurb:
       "WeatherAPI integration with geolocation, loading states, error handling, timestamp, and localStorage.",
     tags: ["API", "Async/Await", "State", "UX"],
-    demo: "#", // TODO: replace
-    source: "#", // TODO: replace
+    demo: "https://volt-weather.netlify.app", 
+    source: "https://github.com/MaryanZ/volt-weather",
     icon: "assets/bolt.svg",
     category: "api",
   },
